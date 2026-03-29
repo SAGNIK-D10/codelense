@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment
+.env
+backend/.env
+backend/venv/
+
+# Build
+frontend/dist/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Cloned repos (runtime data)
+backend/cloned_repos/
+
+# Vite cache
+frontend/node_modules/.vite/
