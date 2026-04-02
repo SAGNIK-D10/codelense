@@ -126,11 +126,11 @@ export default function Dashboard() {
                                 className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-medium text-sm"
                                 style={{
                                     background: isActive
-                                        ? 'linear-gradient(135deg, rgba(102,126,234,0.15), rgba(118,75,162,0.12))'
+                                        ? 'linear-gradient(135deg, rgba(212,168,83,0.15), rgba(201,184,150,0.12))'
                                         : 'transparent',
-                                    border: `1px solid ${isActive ? 'rgba(102,126,234,0.25)' : 'transparent'}`,
-                                    color: isActive ? '#667eea' : 'var(--text-muted)',
-                                    boxShadow: isActive ? '0 0 20px rgba(102,126,234,0.08)' : 'none',
+                                    border: `1px solid ${isActive ? 'rgba(212,168,83,0.25)' : 'transparent'}`,
+                                    color: isActive ? '#D4A853' : 'var(--text-muted)',
+                                    boxShadow: isActive ? '0 0 20px rgba(212,168,83,0.08)' : 'none',
                                     opacity: isLoading ? 0.5 : 1,
                                     cursor: isLoading ? 'not-allowed' : 'pointer',
                                 }}
@@ -154,8 +154,8 @@ export default function Dashboard() {
                     {isLoading ? (
                         <div className="h-full flex flex-col items-center justify-center space-y-4">
                             <div className="relative">
-                                <Loader2 className="w-14 h-14 animate-spin text-purple-500" />
-                                <div className="absolute inset-0 blur-xl bg-purple-500/20 rounded-full" />
+                                <Loader2 className="w-14 h-14 animate-spin text-amber-500" />
+                                <div className="absolute inset-0 blur-xl bg-amber-500/20 rounded-full" />
                             </div>
                             <p className="text-lg animate-pulse" style={{ color: 'var(--text-muted)' }}>
                                 Cloning repository and analyzing codebase...
@@ -166,19 +166,19 @@ export default function Dashboard() {
                             <div
                                 className="p-6 rounded-2xl text-center max-w-md"
                                 style={{
-                                    background: 'rgba(239,68,68,0.08)',
-                                    border: '1px solid rgba(239,68,68,0.2)',
+                                    background: 'rgba(212,168,83,0.08)',
+                                    border: '1px solid rgba(212,168,83,0.2)',
                                 }}
                             >
-                                <h3 className="font-bold text-lg mb-2 text-red-400">Analysis Failed</h3>
-                                <p className="text-red-300 text-sm">{error}</p>
+                                <h3 className="font-bold text-lg mb-2" style={{ color: '#D4A853' }}>Analysis Failed</h3>
+                                <p className="text-sm" style={{ color: '#C9B896' }}>{error}</p>
                                 <button
                                     onClick={() => navigate('/')}
-                                    className="mt-4 px-5 py-2.5 rounded-xl text-sm font-medium transition-all"
+                                    className="mt-4 px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:scale-105"
                                     style={{
-                                        background: 'rgba(239,68,68,0.15)',
-                                        color: '#f87171',
-                                        border: '1px solid rgba(239,68,68,0.2)',
+                                        background: 'linear-gradient(135deg, #D4A853, #8B6914)',
+                                        color: '#fff',
+                                        border: 'none',
                                     }}
                                 >
                                     Go Back
@@ -200,7 +200,7 @@ export default function Dashboard() {
                                     <div className="space-y-6">
                                         <h2 className="text-xl font-semibold pb-2 gradient-text flex items-center gap-2"
                                             style={{ borderBottom: '1px solid var(--border)' }}>
-                                            <Sparkles className="w-5 h-5 text-purple-400" /> Project Overview
+                                            <Sparkles className="w-5 h-5 text-amber-400" /> Project Overview
                                         </h2>
                                         <div
                                             className="p-6 rounded-xl prose max-w-none"
@@ -220,7 +220,7 @@ export default function Dashboard() {
                                     <div className="space-y-6 h-full flex flex-col">
                                         <h2 className="text-xl font-semibold pb-2 gradient-text flex items-center gap-2"
                                             style={{ borderBottom: '1px solid var(--border)' }}>
-                                            <Network className="w-5 h-5 text-blue-400" /> Architecture Diagram
+                                            <Network className="w-5 h-5 text-amber-400" /> Architecture Diagram
                                         </h2>
                                         <div
                                             className="flex-1 p-6 rounded-xl overflow-auto font-mono text-xs whitespace-pre"
@@ -240,7 +240,7 @@ export default function Dashboard() {
                                     <div className="space-y-6 h-full flex flex-col">
                                         <h2 className="text-xl font-semibold pb-2 gradient-text flex items-center gap-2"
                                             style={{ borderBottom: '1px solid var(--border)' }}>
-                                            <FileText className="w-5 h-5 text-cyan-400" /> Generated README
+                                            <FileText className="w-5 h-5 text-yellow-500" /> Generated README
                                         </h2>
                                         <div
                                             className="flex-1 overflow-auto p-6 rounded-xl prose max-w-none"
@@ -260,7 +260,7 @@ export default function Dashboard() {
                                     <div className="flex flex-col h-full space-y-4">
                                         <h2 className="text-xl font-semibold pb-2 gradient-text flex items-center gap-2 flex-shrink-0"
                                             style={{ borderBottom: '1px solid var(--border)' }}>
-                                            <MessageSquare className="w-5 h-5 text-pink-400" /> Q&A Chat
+                                            <MessageSquare className="w-5 h-5 text-amber-400" /> Q&A Chat
                                         </h2>
 
                                         <div
@@ -283,7 +283,7 @@ export default function Dashboard() {
                                                                 }`}
                                                             style={msg.role === 'user'
                                                                 ? {
-                                                                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                                                                    background: 'linear-gradient(135deg, #D4A853, #8B6914)',
                                                                     color: '#fff',
                                                                 }
                                                                 : {
@@ -315,9 +315,9 @@ export default function Dashboard() {
                                                             border: '1px solid var(--border)',
                                                         }}
                                                     >
-                                                        <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce" />
-                                                        <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce [animation-delay:150ms]" />
-                                                        <div className="w-2 h-2 rounded-full bg-purple-400 animate-bounce [animation-delay:300ms]" />
+                                                        <div className="w-2 h-2 rounded-full bg-amber-400 animate-bounce" />
+                                                        <div className="w-2 h-2 rounded-full bg-amber-400 animate-bounce [animation-delay:150ms]" />
+                                                        <div className="w-2 h-2 rounded-full bg-amber-400 animate-bounce [animation-delay:300ms]" />
                                                     </div>
                                                 </div>
                                             )}
@@ -342,7 +342,7 @@ export default function Dashboard() {
                                                 disabled={isChatLoading || !chatInput.trim()}
                                                 className="absolute right-2 top-2 bottom-2 w-10 flex items-center justify-center rounded-lg transition-all duration-200 text-white disabled:opacity-40"
                                                 style={{
-                                                    background: 'linear-gradient(135deg, #667eea, #764ba2)',
+                                                    background: 'linear-gradient(135deg, #D4A853, #8B6914)',
                                                 }}
                                             >
                                                 <Send className="w-4 h-4" />

@@ -7,22 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0F172A', // slate-900
-        surface: '#1E293B',    // slate-800
+        background: '#0C0A06',
+        surface: '#1e1b16',
         primary: {
-          DEFAULT: '#3B82F6',  // blue-500
-          hover: '#2563EB',    // blue-600
-          dim: 'rgba(59, 130, 246, 0.15)',
+          DEFAULT: '#D4A853',
+          hover: '#f2c36b',
+          dim: 'rgba(212, 168, 83, 0.15)',
         },
         accent: {
-          DEFAULT: '#10B981',  // emerald-500
-          hover: '#059669',    // emerald-600
+          DEFAULT: '#C9B896',
+          hover: '#d6c5a2',
         },
         text: {
-          main: '#F8FAFC',     // slate-50
-          muted: '#94A3B8',    // slate-400
+          main: '#e8e1d9',
+          muted: '#9b8f7e',
         },
-        border: '#334155',     // slate-700
+        border: '#4e4637',
       },
       fontFamily: {
         sans: ['Cinzel', 'Inter', 'system-ui', 'sans-serif'],
